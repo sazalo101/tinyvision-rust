@@ -1,0 +1,37 @@
+[package]
+name = "tinyvision"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[[bin]]
+name = "tinyvision"
+path = "src/main.rs"
+
+[[bin]]
+name = "mnist_baseline"
+path = "src/mnist_baseline.rs"
+
+[[bin]]
+name = "stage_tests"
+path = "src/stage_tests.rs"
+
+[[bin]]
+name = "mnist_image"
+path = "src/mnist_image.rs"
+
+[[bin]]
+name = "mnist_generator"
+path = "src/mnist_generator.rs"
+
+[[bin]]
+name = "cifar_sampler"
+path = "src/cifar_sampler.rs"
+
+[dependencies]
+
